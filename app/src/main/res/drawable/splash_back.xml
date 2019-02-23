@@ -2,11 +2,12 @@
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android" android:opacity="opaque">
 
     <!-- The background color, preferably the same as your normal theme -->
-    <item android:drawable="@color/splash"/>
+    <item android:drawable="@drawable/background_gradient"/>
     <item>
 
         <bitmap
             android:src="@drawable/splash_image"
+
             android:gravity="center"/>
 
     </item>
