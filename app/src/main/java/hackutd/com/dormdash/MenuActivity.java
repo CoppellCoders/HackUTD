@@ -68,8 +68,7 @@ public class MenuActivity extends Activity {
         });
         try {
             Restraunts rs = (Restraunts) getIntent().getSerializableExtra("info");
-            Picasso.with(getApplicationContext()).load(((R.drawable.place_1))).into(imgImageView);
-
+            Picasso.with(getApplicationContext()).load(getIntent().getStringExtra("imageUrl")).fit().centerCrop().into(imgImageView);
             titleTextView.setText(rs.getrName());
             descTextView.setText(rs.getrType());
 

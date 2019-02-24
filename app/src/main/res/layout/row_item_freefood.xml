@@ -73,7 +73,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
-
+        android:id="@+id/freefood_location"
         android:layout_marginStart="13dp"
         android:layout_toEndOf="@+id/itemPic"
         android:layout_weight="0.18"
@@ -85,24 +85,7 @@
 
         android:textColor="#ffffff"
         android:textSize="15dp" />
-    <TextView
-        android:id="@+id/freefood_location"
-        android:gravity="center"
-        android:layout_marginBottom="20dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_gravity=""
-        android:layout_marginStart="13dp"
-        android:layout_toEndOf="@+id/itemPic"
-        android:layout_weight="0.18"
-        android:visibility="visible"
-        android:paddingRight="15dp"
 
-        android:fontFamily="sans-serif"
-        android:text="Chick Fil A at UTD"
 
-        android:textColor="#ffffff"
-        android:textSize="15dp" />
 
 </LinearLayout>

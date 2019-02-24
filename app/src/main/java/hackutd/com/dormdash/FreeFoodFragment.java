@@ -102,14 +102,14 @@ public class FreeFoodFragment extends Fragment {
                                                 e.printStackTrace();
                                             }
                                         }
-                                        System.out.println(freeFoodAdapters + " nibba");
+
                                         mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
                                         mAdapter = new FreeFoodAdapter(inOrder, getContext());
 
                                         mRecyclerView.setAdapter(mAdapter);
 
                                     } catch (Exception ex) {
-                                        Log.e(TAG, ex.getMessage() + " nibba");
+                                        ex.printStackTrace();
                                     }
                                 }
                             }
@@ -161,14 +161,14 @@ public class FreeFoodFragment extends Fragment {
                                 e.printStackTrace();
                             }
                         }
-                        System.out.println(freeFoodAdapters + " nibba");
+
                         mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
                         mAdapter = new FreeFoodAdapter(inOrder, getContext());
 
                         mRecyclerView.setAdapter(mAdapter);
 
                     } catch (Exception ex) {
-                        Log.e(TAG, ex.getMessage() + " nibba");
+                        ex.printStackTrace();
                     }
                 }
             }

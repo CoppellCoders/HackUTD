@@ -67,6 +67,7 @@ public class RestrauntsFragment extends Fragment {
                 intent.putExtra("info", restraunts);
                 intent.putExtra("rName", restraunts.rName);
                 intent.putExtra("address", restraunts.address);
+                intent.putExtra("imageUrl", restraunts.imageUrl);
                 startActivity(intent);
             }
 

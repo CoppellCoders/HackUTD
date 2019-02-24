@@ -117,7 +117,7 @@ public class FreeFoodAdapter extends RecyclerViewAdapter<FreeFoods, FreeFoodAdap
             time.setText(dw);
 
            desc.setText(freeFoods.getDesc());
-        loc.setText(freeFoods.getLocation());
+        loc.setText("Location: " + freeFoods.getLocation());
         }
 
     }
