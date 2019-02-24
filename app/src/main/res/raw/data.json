@@ -8,7 +8,7 @@
         "cusine": "American",
         "latitude":"",
         "longitude":"",
-        "address": "",
+        "address": "Student Union",
         "menu":[
             {
                 "category": "Potatole",
@@ -59,7 +59,7 @@
             "cusine": "American",
             "latitude":"",
             "longitude":"",
-            "address": "",
+            "address": "Dining Hall West",
             "menu":[
                 {
                     "category": "Personal Pizzas",
@@ -94,7 +94,7 @@
             "cusine": "American",
             "latitude":"",
             "longitude":"",
-            "address": "",
+            "address": "Student Union",
             "menu":[
                 {
                     "category": "Classics",
@@ -128,7 +128,7 @@
             "cusine": "American",
             "latitude":"",
             "longitude":"",
-            "address": "",
+            "address": "Parking Structure 3",
             "menu":[
                 {
                     "category": "Signature Sandwiches                   ",
@@ -162,7 +162,7 @@
             "cusine": "American",
             "latitude":"",
             "longitude":"",
-            "address": "",
+            "address": "Parking Structure 3",
             "menu":[
                 {
                     "category": "Pancakes",

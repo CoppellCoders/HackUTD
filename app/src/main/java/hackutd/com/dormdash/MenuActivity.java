@@ -38,6 +38,7 @@ public class MenuActivity extends Activity {
     Button checkout;
     HashMap<String, Integer> order;
     List<Menu> menu;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,11 +52,14 @@ public class MenuActivity extends Activity {
         checkout = findViewById(R.id.checkout);
         order = new HashMap<>();
         menu = new ArrayList<>();
+
         checkout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), CheckoutActivity.class);
                 intent.putExtra("amount", amount);
+                intent.putExtra("address", getIntent().getStringExtra("address"));
+                intent.putExtra("rName", getIntent().getStringExtra("rName"));
                 Bundle args = new Bundle();
                 args.putSerializable("data", (Serializable)menu);
                 intent.putExtra("BUNDLE", args);

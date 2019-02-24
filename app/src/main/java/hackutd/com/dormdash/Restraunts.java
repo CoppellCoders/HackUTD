@@ -9,13 +9,15 @@ class Restraunts implements Serializable{
     String rType;
     String distance;
     String menu;
-    public Restraunts(String rName, String imageUrl, String rating, String rType, String distance, JSONArray menu){
+    String address;
+    public Restraunts(String rName, String imageUrl, String rating, String rType, String distance, JSONArray menu, String address){
         this.rName = rName;
         this.imageUrl = imageUrl;
         this.rating = rating;
         this.rType = rType;
         this.distance = distance;
         this.menu = menu.toString();
+        this.address = address;
     }
 
     public String getrName() {

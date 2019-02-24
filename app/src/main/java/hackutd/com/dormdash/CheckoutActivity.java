@@ -8,6 +8,8 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.widget.TextView;
 
+import org.w3c.dom.Text;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,6 +22,9 @@ public class CheckoutActivity extends Activity{
     TextView total;
     TextView total_price;
     TextView total_items;
+    TextView name;
+    TextView address;
+    TextView eta;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +35,12 @@ public class CheckoutActivity extends Activity{
         total = findViewById(R.id.total);
         total_price = findViewById(R.id.total_price);
         total_items = findViewById(R.id.checkout_items);
+        name = findViewById(R.id.checkout_restraunt_name);
+        address = findViewById(R.id.checkout_address);
+        eta = findViewById(R.id.eta);
+        name.setText(getIntent().getStringExtra("rName"));
+        address.setText(getIntent().getStringExtra("address"));
+        eta.setText((int)((Math.random())*30+1) + " mins ");
         int items = 0;
         Intent intent = getIntent();
         double amount = intent.getDoubleExtra("amount", 0);
