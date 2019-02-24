@@ -1,13 +1,17 @@
 package hackutd.com.dormdash;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.app.AppCompatActivity;
 
-public class SplashActivity extends Activity {
+/**
+ * Created by Darshan on 1/20/2018.
+ */
+
+public class ShowSplash extends AppCompatActivity {
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         startActivity(new Intent(this, LoginActivity.class));
         finish();

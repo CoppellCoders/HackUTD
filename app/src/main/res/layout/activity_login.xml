@@ -13,54 +13,78 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/splash_image"
+        android:layout_marginTop="25dp"
         />
+
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
+
         android:layout_height="wrap_content">
-    <TextView
+<LinearLayout
+    android:layout_width="wrap_content"
+
+    android:layout_height="wrap_content">
+
+    <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Login"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="30dp"
-        android:alpha=".8"
-        android:textColor="@android:color/white"
-        android:paddingBottom="15dp"
-        />
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:textSize="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="left"
+
+            android:alpha=".8"
+            android:textColor="@android:color/white"
+            android:paddingBottom="8dp"
+            />
+        <EditText
+            android:layout_width="wrap_content"
+            android:hint="Email"
+            android:drawablePadding="10dp"
+            android:paddingLeft="10dp"
+
+            android:drawableLeft="@drawable/email_icon"
+            android:textColorHint="@android:color/white"
+            android:background="@drawable/edittext_bg"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/colorPrimary"
+            />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:hint="Password"
+            android:background="@drawable/edittext_bg"
+            android:drawableLeft="@drawable/password_icon"
+            android:textColorHint="@android:color/white"
+            android:drawablePadding="10dp"
+            android:paddingLeft="10dp"
+            android:textColor="@color/colorPrimary"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/login_button"
+            android:textColor="@android:color/white"
+            android:text="Log In"
+            android:background="@drawable/edittext_bg"
+
+            />
+
     </LinearLayout>
-    <EditText
-        android:layout_width="wrap_content"
-        android:hint="Email"
-        android:drawablePadding="10dp"
-        android:paddingLeft="10dp"
 
-        android:drawableLeft="@drawable/email_icon"
-        android:textColorHint="@android:color/white"
-        android:background="@drawable/edittext_bg"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:hint="Password"
-        android:background="@drawable/edittext_bg"
-        android:drawableLeft="@drawable/password_icon"
-        android:textColorHint="@android:color/white"
-        android:drawablePadding="10dp"
-        android:paddingLeft="10dp"
-        android:layout_height="wrap_content" />
+</LinearLayout>
+    </LinearLayout>
 
-    <Button
-        android:layout_marginTop="20dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/login_button"
-        android:textColor="@android:color/white"
-        android:text="Log In"
-        android:background="@drawable/edittext_bg"
-
-        />
 
     <TextView
         android:layout_marginTop="50dp"
