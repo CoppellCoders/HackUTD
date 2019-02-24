@@ -48,7 +48,7 @@ public class RestrauntsFragment extends Fragment {
             for(int i = 0; i < jsonArray.length(); i++){
                 JSONObject cur = jsonArray.getJSONObject(i);
                 data.add(new Restraunts(cur.getString("name"), cur.getString("imageUrl"),
-                        cur.getString("rating"), cur.getString("type"),
+                        cur.getString("rating"), cur.getString("cuisine"),
                         cur.getString("distance")));
             }
             rv.setAdapter(new RestrauntAdapter(data, getContext()));
