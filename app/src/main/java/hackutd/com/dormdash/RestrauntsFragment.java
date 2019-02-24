@@ -27,7 +27,7 @@ public class RestrauntsFragment extends Fragment {
     List<Restraunts> data;
     RestrauntAdapter ra;
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(final LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
         View view =  inflater.inflate(R.layout.restraunts_fragment, container, false);
@@ -53,7 +53,7 @@ public class RestrauntsFragment extends Fragment {
                 JSONObject cur = jsonArray.getJSONObject(i);
                 data.add(new Restraunts(cur.getString("name"), cur.getString("imageUrl"),
                         cur.getString("rating"), cur.getString("cusine"),
-                        cur.getString("distance"), cur.getJSONArray("menu")));
+                        cur.getString("distance"), cur.getJSONArray("menu"), cur.getString("address")));
             }
             ra = new RestrauntAdapter(data, getContext());
             rv.setAdapter(ra);
@@ -65,6 +65,8 @@ public class RestrauntsFragment extends Fragment {
             public void onClick(@NonNull Restraunts restraunts) {
                 Intent intent = new Intent(getContext(), MenuActivity.class);
                 intent.putExtra("info", restraunts);
+                intent.putExtra("rName", restraunts.rName);
+                intent.putExtra("address", restraunts.address);
                 startActivity(intent);
             }
 

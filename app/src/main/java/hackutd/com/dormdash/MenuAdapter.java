@@ -44,7 +44,8 @@ public class MenuAdapter extends RecyclerViewAdapter<Menu, MenuAdapter.ItemItemV
 
         @NonNull
         private final TextView menuDesc;
-
+        @NonNull
+        private final TextView counter;
 
 
 
@@ -53,6 +54,7 @@ public class MenuAdapter extends RecyclerViewAdapter<Menu, MenuAdapter.ItemItemV
             menuName = itemView.findViewById(R.id.menu_name);
             menuDetail = itemView.findViewById(R.id.menu_detail);
             menuDesc = itemView.findViewById(R.id.menu_desc);
+            counter = itemView.findViewById(R.id.num_items);
         }
 
         @Override
@@ -63,6 +65,7 @@ public class MenuAdapter extends RecyclerViewAdapter<Menu, MenuAdapter.ItemItemV
             menuName.setText(Item.name);
             menuDetail.setText(Item.priceCalories);
             menuDesc.setText(Item.description);
+            counter.setText(Item.getCount()+"");
         }
 
     }
