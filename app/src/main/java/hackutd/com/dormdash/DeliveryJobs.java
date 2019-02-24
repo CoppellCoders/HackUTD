@@ -63,7 +63,11 @@ public class DeliveryJobs extends AppCompatActivity {
                     @Override
                     public void run() {
                         swipeRefreshLayout.setRefreshing(false);
-                        jobItems.add(new JobItem("Lemma Coffee Roasters",R.drawable.place_1,"Coffee",5.0,4.50,5));
+                        jobItems.clear();
+                        jobItems.add(new JobItem("Einstein Bros Bagels","https://content-service.sodexomyway.com/media/EBB_bagels-coffee-1920x976_tcm54-6902.jpg?url=https://gorilladining.sodexomyway.com/","American",4.1,10.67,2.9));
+                        jobItems.add(new JobItem("Papa Johns","https://www.papajohns.com/static-assets/a/images/web/product/pizzas/sma_GardenFresh-compressed.jpg","American",4.8,6.58,1.2));
+                        jobItems.add(new JobItem("Smashd","https://d9hyo6bif16lx.cloudfront.net/live/img/production/detail/menu/lunch-dinner_burgers_all-american-burger.jpg","American",4.5,4.26,3.8));
+
                         recyclerView.setLayoutManager(new LinearLayoutManager(getApplication()));
                         adapter =  new JobAdapter(jobItems,getApplication());
                         recyclerView.setAdapter(adapter);
@@ -132,8 +136,8 @@ public class DeliveryJobs extends AppCompatActivity {
                 },1000);
             }
         });
-        jobItems.add(new JobItem("Lemma Coffee Roasters",R.drawable.place_1,"Coffee",5.0,4.50,5));
-
+        jobItems.add(new JobItem("Papa Johns","https://www.papajohns.com/static-assets/a/images/web/product/pizzas/sma_GardenFresh-compressed.jpg","American",4.8,6.58,1.2));
+        jobItems.add(new JobItem("Smashd","https://d9hyo6bif16lx.cloudfront.net/live/img/production/detail/menu/lunch-dinner_burgers_all-american-burger.jpg","American",4.5,4.26,3.8));
 
         System.out.println(jobItems);
         this.recyclerView.setLayoutManager(new LinearLayoutManager(getApplication()));

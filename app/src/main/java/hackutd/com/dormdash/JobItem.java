@@ -4,13 +4,13 @@ import java.io.Serializable;
 
 public class JobItem implements Serializable {
     public String title;
-    public int img;
+    public String img;
     public String desc;
     public double rating;
     public double moneys;
     public double distance;
 
-    public JobItem(String title, int img, String desc, double rating, double moneys, double distance) {
+    public JobItem(String title, String img, String desc, double rating, double moneys, double distance) {
         this.title = title;
         this.img = img;
         this.desc = desc;
@@ -28,11 +28,11 @@ public class JobItem implements Serializable {
         this.title = title;
     }
 
-    public int getImg() {
+    public String getImg() {
         return img;
     }
 
-    public void setImg(int img) {
+    public void setImg(String img) {
         this.img = img;
     }
 

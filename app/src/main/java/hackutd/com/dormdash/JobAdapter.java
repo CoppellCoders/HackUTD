@@ -67,7 +67,8 @@ public class JobAdapter extends RecyclerViewAdapter<JobItem, JobAdapter.ItemItem
             super.bind(position);
             final JobItem jobItem = get(position);
 
-            Picasso.with(context).load(((jobItem)).getImg()).into(imgImageView);
+
+            Picasso.with(context).load(jobItem.getImg()).fit().centerCrop().into(imgImageView);
 
             titleTextView.setText(jobItem.getTitle());
 
