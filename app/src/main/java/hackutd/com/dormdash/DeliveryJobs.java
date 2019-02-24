@@ -64,10 +64,9 @@ public class DeliveryJobs extends AppCompatActivity {
                     public void run() {
                         swipeRefreshLayout.setRefreshing(false);
                         jobItems.clear();
-                        jobItems.add(new JobItem("Einstein Bros Bagels","https://content-service.sodexomyway.com/media/EBB_bagels-coffee-1920x976_tcm54-6902.jpg?url=https://gorilladining.sodexomyway.com/","American",4.1,10.67,2.9));
-                        jobItems.add(new JobItem("Papa Johns","https://www.papajohns.com/static-assets/a/images/web/product/pizzas/sma_GardenFresh-compressed.jpg","American",4.8,6.58,1.2));
-                        jobItems.add(new JobItem("Smashd","https://d9hyo6bif16lx.cloudfront.net/live/img/production/detail/menu/lunch-dinner_burgers_all-american-burger.jpg","American",4.5,4.26,3.8));
-
+                        jobItems.add(new JobItem("Einstein Bros Bagels","https://content-service.sodexomyway.com/media/EBB_bagels-coffee-1920x976_tcm54-6902.jpg?url=https://gorilladining.sodexomyway.com/","American",4.1,10.67,2.9,"Parking Structure 3"));
+                        jobItems.add(new JobItem("Papa Johns","https://www.papajohns.com/static-assets/a/images/web/product/pizzas/sma_GardenFresh-compressed.jpg","American",4.8,6.58,1.2,"Dining Hall West"));
+                        jobItems.add(new JobItem("Smashd","https://d9hyo6bif16lx.cloudfront.net/live/img/production/detail/menu/lunch-dinner_burgers_all-american-burger.jpg","American",4.5,4.26,3.8,"Student Union"));
                         recyclerView.setLayoutManager(new LinearLayoutManager(getApplication()));
                         adapter =  new JobAdapter(jobItems,getApplication());
                         recyclerView.setAdapter(adapter);
@@ -78,7 +77,8 @@ public class DeliveryJobs extends AppCompatActivity {
                                 myDia.setContentView(R.layout.jobitempopup);
                                 imagebutton = (ImageButton) myDia.findViewById(R.id.map_aaaaa);
                                 imagebuttonn = (ImageButton) myDia.findViewById(R.id.map_aaaa);
-
+                                TextView locName = myDia.findViewById(R.id.location_name);
+                                locName.setText(itemItem.getLoc());
                            imagebutton.setOnClickListener(new View.OnClickListener() {
                                @Override
                                public void onClick(View view) {
@@ -136,8 +136,8 @@ public class DeliveryJobs extends AppCompatActivity {
                 },1000);
             }
         });
-        jobItems.add(new JobItem("Papa Johns","https://www.papajohns.com/static-assets/a/images/web/product/pizzas/sma_GardenFresh-compressed.jpg","American",4.8,6.58,1.2));
-        jobItems.add(new JobItem("Smashd","https://d9hyo6bif16lx.cloudfront.net/live/img/production/detail/menu/lunch-dinner_burgers_all-american-burger.jpg","American",4.5,4.26,3.8));
+        jobItems.add(new JobItem("Papa Johns","https://www.papajohns.com/static-assets/a/images/web/product/pizzas/sma_GardenFresh-compressed.jpg","American",4.8,6.58,1.2,"Dining Hall West"));
+        jobItems.add(new JobItem("Smashd","https://d9hyo6bif16lx.cloudfront.net/live/img/production/detail/menu/lunch-dinner_burgers_all-american-burger.jpg","American",4.5,4.26,3.8,"Student Union"));
 
         System.out.println(jobItems);
         this.recyclerView.setLayoutManager(new LinearLayoutManager(getApplication()));
@@ -148,10 +148,27 @@ public class DeliveryJobs extends AppCompatActivity {
             @Override
             public void onClick(@NonNull final JobItem itemItem) {
                 myDia.setContentView(R.layout.jobitempopup);
+                imagebutton = (ImageButton) myDia.findViewById(R.id.map_aaaaa);
+                imagebuttonn = (ImageButton) myDia.findViewById(R.id.map_aaaa);
+                imagebutton.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        imagebutton.setVisibility(View.GONE);
+                        imagebuttonn.setVisibility(View.VISIBLE);
+                    }
+                });
 
+                imagebuttonn.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        imagebutton.setVisibility(View.VISIBLE);
+                        imagebuttonn.setVisibility(View.GONE);
+                    }
+                });
                 Button close = myDia.findViewById(R.id.close_btnjob);
                 Button confirm = myDia.findViewById(R.id.confirm_delvery);
-
+                TextView locName = myDia.findViewById(R.id.location_name);
+                locName.setText(itemItem.getLoc());
                 confirm.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {

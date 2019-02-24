@@ -9,15 +9,27 @@ public class JobItem implements Serializable {
     public double rating;
     public double moneys;
     public double distance;
+    String loc;
 
-    public JobItem(String title, String img, String desc, double rating, double moneys, double distance) {
+    public String getLoc() {
+        return loc;
+    }
+
+    public void setLoc(String loc) {
+        this.loc = loc;
+    }
+
+    public JobItem(String title, String img, String desc, double rating, double moneys, double distance, String loc) {
         this.title = title;
         this.img = img;
         this.desc = desc;
         this.rating = rating;
         this.moneys = moneys;
         this.distance = distance;
+        this.loc = loc;
     }
+
+
 
 
     public String getTitle() {
