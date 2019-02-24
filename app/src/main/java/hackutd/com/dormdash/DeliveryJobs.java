@@ -24,14 +24,7 @@ import java.io.StringWriter;
 import java.io.Writer;
 import java.util.ArrayList;
 
-<<<<<<< HEAD
-import hackutd.com.dormdash.JobAdapter;
-import hackutd.com.dormdash.JobItem;
-import hackutd.com.dormdash.R;
-import hackutd.com.dormdash.RecyclerViewAdapter;
 
-=======
->>>>>>> 1a1b51dbcd970205465d4a7682a582df149cb480
 public class DeliveryJobs extends AppCompatActivity {
     public RecyclerView recyclerView;
     private JobAdapter adapter;
