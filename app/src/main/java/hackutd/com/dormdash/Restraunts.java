@@ -1,4 +1,6 @@
 package hackutd.com.dormdash;
+import org.json.JSONArray;
+
 import java.io.Serializable;
 class Restraunts implements Serializable{
     String rName;
@@ -6,12 +8,14 @@ class Restraunts implements Serializable{
     String rating;
     String rType;
     String distance;
-    public Restraunts(String rName, String imageUrl, String rating, String rType, String distance){
+    JSONArray menu;
+    public Restraunts(String rName, String imageUrl, String rating, String rType, String distance, JSONArray menu){
         this.rName = rName;
         this.imageUrl = imageUrl;
         this.rating = rating;
         this.rType = rType;
         this.distance = distance;
+        this.menu = menu;
     }
 
     public String getrName() {

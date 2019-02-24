@@ -1,7 +1,7 @@
 [
     {
         "id": "001",
-        "name": "Smash'd",
+        "name": "Smashd",
         "imageUrl": "",
         "rating": "3",
         "distance":"0.6",
@@ -29,7 +29,7 @@
                 "itemName":"Woo Hoo Aloo",
                 "price":"",
                 "calories":"320+30+15+140+140+70",
-                "description":"Baked Potato, Steamed Broccoli Florets, Roasted Bell Peppers, Bal's No Butter Chicken, Crispy Baked Tofu, Crumbled Feta Cheese"
+                "description":"Baked Potato, Steamed Broccoli Florets, Roasted Bell Peppers, Bals No Butter Chicken, Crispy Baked Tofu, Crumbled Feta Cheese"
             }
         ],
         "addons": [
@@ -50,10 +50,9 @@
             }
         ]
     },
-    [
         {
             "id": "002",
-            "name": "Papa John's",
+            "name": "Papa Johns",
             "imageUrl": "",
             "rating": "3.8",
             "distance":"0.1",
@@ -83,9 +82,9 @@
                     "calories":"180",
                     "description":"Pizza with fresh sliced onions and green peppers, baby portabella mushrooms, black olives, Roma tomato slices"
                 }
-            ],
+            ]
 
-        }
+        },
         {
             "id": "003",
             "name": "Chick-Fil-A",
@@ -118,8 +117,8 @@
                     "calories":"480",
                     "description":"Sandwich with chicken (spicy)"
                 }
-            ],
-        }
+            ]
+        },
         {
             "id": "004",
             "name": "Einstein Bros Bagels",
@@ -152,8 +151,8 @@
                     "calories":"660",
                     "description":"Roasted Turkey, Lettuce, Tomato, Red Onion, Cheddar Cheese with Mayo & Deli Mustard on a Fresh-Baked Potato Roll"
                 }
-            ],
-        }
+            ]
+        },
         {
             "id": "005",
             "name": "IHOP",
@@ -186,7 +185,6 @@
                     "calories":"1000",
                     "description":"Two pieces topped with choice of glazed strawberries, blueberry compote or cinnamon apple topping"
                 }
-            ],
+            ]
         }
-
 ]
