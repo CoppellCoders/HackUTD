@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_marginBottom="30dp"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:background="#FF9454"
     android:layout_height="wrap_content"
 
@@ -12,8 +12,8 @@
 
     <ImageView
         android:id="@+id/itemPic"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="137dp"
         android:layout_margin="10dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"

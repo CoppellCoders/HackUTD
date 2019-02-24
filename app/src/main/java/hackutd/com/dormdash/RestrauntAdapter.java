@@ -1,10 +1,15 @@
 package hackutd.com.dormdash;
 
+import android.app.Activity;
 import android.content.Context;
+import android.graphics.Point;
 import android.support.annotation.NonNull;
+import android.util.DisplayMetrics;
+import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -63,8 +68,10 @@ public class RestrauntAdapter extends RecyclerViewAdapter<Restraunts, RestrauntA
         @Override
         public void bind(int position) {
             super.bind(position);
+
+
             final Restraunts Item = get(position);
-            Picasso.with(context).load(((R.drawable.place_1))).into(imgImageView);
+            Picasso.with(context).load(Item.imageUrl).fit().centerCrop().into(imgImageView);
 
             titleTextView.setText(Item.getrName());
             descTextView.setText(Item.getrType());
