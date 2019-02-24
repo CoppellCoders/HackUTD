@@ -24,8 +24,10 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.navigation_events:
 
                     return true;
+
                 case R.id.navigation_profile:
                     changeFragment(new ProfileFragment());
+                    return true;
                 case R.id.navigation_food:
                     changeFragment(new RestrauntsFragment());
                     return true;
