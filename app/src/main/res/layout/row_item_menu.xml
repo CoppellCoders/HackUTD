@@ -12,9 +12,6 @@
 
 
 
-
-
-
         <TextView
             android:id="@+id/menu_name"
 
@@ -47,6 +44,7 @@
 
             android:textColor="#ffffff"
             android:textSize="15dp" />
+
 
 
 

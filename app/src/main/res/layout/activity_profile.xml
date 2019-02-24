@@ -83,7 +83,7 @@
         android:textColor="@android:color/white"
         android:text="Change Address"
         android:background="@drawable/profile_edittext_bg"
-        android:drawableLeft="@drawable/changeaddress"
+        android:drawableLeft="@drawable/address"
         android:gravity="left|center"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
