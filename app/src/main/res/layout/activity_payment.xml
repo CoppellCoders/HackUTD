@@ -9,7 +9,7 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:background="#FF9554"
-android:layout_marginBottom="10dp"
+        android:layout_marginBottom="10dp"
         android:layout_marginTop="25dp"
         android:layout_height="50dp">
 
@@ -47,6 +47,7 @@ android:layout_marginBottom="10dp"
         android:textSize="30dp"
         />
     <Button
+        android:id="@+id/g_pay"
         android:layout_width="wrap_content"
         android:layout_gravity="center"
         android:layout_height="wrap_content"
@@ -54,6 +55,7 @@ android:layout_marginBottom="10dp"
         android:background="@drawable/google_pay"
         />
     <Button
+        android:id="@+id/meal_pay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
