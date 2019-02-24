@@ -124,6 +124,9 @@ public class MenuActivity extends Activity {
                             menuTitle.setText("Menu - $" + String.format("%.2f", amount));
                             ma.notifyDataSetChanged();
 
+                            if(order.size()>0){
+                                checkout.setVisibility(View.VISIBLE);
+                            }
                         }
                     });
 

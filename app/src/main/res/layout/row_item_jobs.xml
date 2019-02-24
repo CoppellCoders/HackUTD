@@ -88,6 +88,8 @@
             android:id="@+id/item_rating"
             android:gravity="left"
             android:background="@drawable/rating_back"
+
+
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
@@ -95,7 +97,7 @@
             android:layout_marginStart="5dp"
             android:layout_toEndOf="@+id/itemPic"
             android:fontFamily="sans-serif"
-            android:text="5.0/5.0"
+            android:text="5/5.0"
             android:textStyle="bold"
             android:textColor="#ffffff"
             android:paddingLeft="20dp"

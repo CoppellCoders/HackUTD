@@ -7,7 +7,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Select Quantity: "
+        android:text="Select Quantity"
         android:textColor="#ffffff"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="10dp"
@@ -17,6 +17,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:theme="@style/AppTheme.Picker"
         android:id="@+id/numberPicker"
 
         />
@@ -25,8 +26,15 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="Set"
+
+        android:textColor="@color/colorPrimary"
+        android:textAllCaps="false"
+
         android:id="@+id/addItem"
         android:background="@drawable/edittext_bg"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         />
 
 </LinearLayout>
