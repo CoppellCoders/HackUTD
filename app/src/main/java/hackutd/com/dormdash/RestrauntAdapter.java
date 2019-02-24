@@ -14,22 +14,22 @@ import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
-public class JobAdapter extends RecyclerViewAdapter<JobItem, JobAdapter.ItemItemViewHolder>{
+public class RestrauntAdapter extends RecyclerViewAdapter<Restraunts, RestrauntAdapter.ItemItemViewHolder>{
 
 
     private Context context;
-    List<JobItem> jobItems;
+    List<Restraunts> restraunts;
 
-    public JobAdapter(List<JobItem> outfit, Context context) {
+    public RestrauntAdapter(List<Restraunts> outfit, Context context) {
         super(outfit);
-        this.jobItems = outfit;
+        this.restraunts = outfit;
         this.context = context;
     }
 
 
 
     @Override
-    public JobAdapter.ItemItemViewHolder onCreateViewHolder(@NonNull final ViewGroup parent,
+    public RestrauntAdapter.ItemItemViewHolder onCreateViewHolder(@NonNull final ViewGroup parent,
                                                             final int viewType) {
         return new ItemItemViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.row_item_jobs, parent, false));
     }
@@ -63,16 +63,14 @@ public class JobAdapter extends RecyclerViewAdapter<JobItem, JobAdapter.ItemItem
         @Override
         public void bind(int position) {
             super.bind(position);
-            final JobItem jobItem = get(position);
-            System.out.println("nigga" + jobItem.toString());
-            Picasso.with(context).load(((jobItem)).getImg()).into(imgImageView);
+            final Restraunts Item = get(position);
+            Picasso.with(context).load(((R.drawable.place_1))).into(imgImageView);
 
-            titleTextView.setText(jobItem.getTitle());
+            titleTextView.setText(Item.getrName());
+            descTextView.setText(Item.getrType());
 
-            descTextView.setText(jobItem.getDesc());
-
-            ratingTextView.setText(String.valueOf(jobItem.getRating())+"/5.0");
-            distanceTextView.setText(String.valueOf(jobItem.getDistance() + " miles away"));
+            ratingTextView.setText(String.valueOf(Item.getRating())+"/5.0");
+            distanceTextView.setText(String.valueOf(Item.getDistance() + " miles away"));
         }
 
     }

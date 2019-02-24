@@ -1,3 +1,4 @@
+
 package hackutd.com.dormdash;
 
 import android.content.Intent;
@@ -12,39 +13,49 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.Reader;
+import java.io.StringWriter;
+import java.io.Writer;
+import java.util.ArrayList;
+
+import hackutd.com.dormdash.JobAdapter;
+import hackutd.com.dormdash.JobItem;
+import hackutd.com.dormdash.R;
+import hackutd.com.dormdash.RecyclerViewAdapter;
+
 public class DeliveryJobs extends AppCompatActivity {
     public RecyclerView recyclerView;
     private JobAdapter adapter;
+
+    private ArrayList<JobItem> jobItems;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_delivery_jobs);
-
         recyclerView = findViewById(R.id.jobs);
-        this.adapter =  new AmmoAdapter(outfits,getActivity());
-        adapter.setListener(new RecyclerViewAdapter.Listener<AmmoItem>() {
+        jobItems = new ArrayList<>();
+
+        jobItems.add(new JobItem("Lemma Coffee Roasters",R.drawable.place_1,"Coffee",5.0,4.50,5));
+
+
+        System.out.println(jobItems);
+        this.recyclerView.setLayoutManager(new LinearLayoutManager(getApplication()));
+        this.adapter =  new JobAdapter(jobItems,getApplication());
+        System.out.println(adapter);
+        adapter.setListener(new RecyclerViewAdapter.Listener<JobItem>() {
             @Override
-            public void onClick(@NonNull AmmoItem itemItem) {
+            public void onClick(@NonNull JobItem itemItem) {
 
-                if (itemItem.getTitle().equals("Light Bullets")) {
-                    startActivity(new Intent(getActivity(), LightBullets.class));
-                } else if (itemItem.getTitle().equals("Energy Bullets")) {
 
-                    startActivity(new Intent(getActivity(), EnergyBullets.class));
-                } else if (itemItem.getTitle().equals("Heavy Bullets")) {
-                    startActivity(new Intent(getActivity(), HeavyBullets.class));
-
-                }
-                else if(itemItem.getTitle().equals("Shotgun Shells")){
-                    startActivity(new Intent(getActivity(), ShotgunBullets.class));
-
-                }else if(itemItem.getTitle().equals("Unique Rounds")){
-
-                    startActivity(new Intent(getActivity(), Unique.class));
-                }
             }
         });
-        this.recyclerView.setAdapter(adapter);
+        recyclerView.setAdapter(adapter);
 
     }
 
