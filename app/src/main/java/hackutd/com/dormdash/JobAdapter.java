@@ -60,7 +60,7 @@ public class JobAdapter extends RecyclerViewAdapter<JobItem, JobAdapter.ItemItem
             descTextView = (TextView) itemView.findViewById(R.id.item_desc);
             ratingTextView = (TextView) itemView.findViewById(R.id.item_rating);
             distanceTextView = (TextView) itemView.findViewById(R.id.item_distance);
-            priceTextView = itemView.findViewById(R.id.item_price)
+            priceTextView = itemView.findViewById(R.id.item_price);
         }
 
         @Override
@@ -76,6 +76,9 @@ public class JobAdapter extends RecyclerViewAdapter<JobItem, JobAdapter.ItemItem
 
             ratingTextView.setText(String.valueOf(jobItem.getRating())+"/5.0");
             distanceTextView.setText(String.valueOf(jobItem.getDistance() + " miles away"));
+            priceTextView.setVisibility(View.VISIBLE);
+            priceTextView.setText("$"+String.valueOf(jobItem.getMoneys()));
+
         }
 
     }

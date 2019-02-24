@@ -53,6 +53,7 @@
         android:layout_width="match_parent"
         android:layout_height="523dp"
         android:layout_marginTop="8dp"
+
         android:layout_marginBottom="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp" />

@@ -26,7 +26,7 @@ import java.util.ArrayList;
 public class DeliveryJobs extends AppCompatActivity {
     public RecyclerView recyclerView;
     private JobAdapter adapter;
-    List<Restraunts> data;
+
     private ArrayList<JobItem> jobItems;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,29 +36,7 @@ public class DeliveryJobs extends AppCompatActivity {
         jobItems = new ArrayList<>();
 
         jobItems.add(new JobItem("Lemma Coffee Roasters",R.drawable.place_1,"Coffee",5.0,4.50,5));
-        InputStream is = getResources().openRawResource(R.raw.data);
-        Writer writer = new StringWriter();
-        char[] buffer = new char[1024];
-        try{
-            Reader reader = new BufferedReader(new InputStreamReader(is, "UTF-8"));
-            int n;
-            while ((n = reader.read(buffer)) != -1) {
-                writer.write(buffer, 0, n);
-            }
-        }catch(Exception e){
 
-        }try {
-            JSONArray jsonArray = new JSONArray(writer.toString());
-            data = new ArrayList<>();
-            for(int i = 0; i < jsonArray.length(); i++){
-                JSONObject cur = jsonArray.getJSONObject(i);
-                data.add(new Restraunts(cur.getString("name"), cur.getString("imageUrl"),
-                        cur.getString("rating"), cur.getString("type"),
-                        cur.getString("distance")));
-            }
-        }catch(Exception e){
-
-        }
 
         System.out.println(jobItems);
         this.recyclerView.setLayoutManager(new LinearLayoutManager(getApplication()));
