@@ -2,11 +2,13 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
+    android:layout_marginBottom="30dp"
     android:layout_width="wrap_content"
     android:background="#FF9454"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="30dp"
+
     android:weightSum="1">
+
 
     <ImageView
         android:id="@+id/itemPic"
@@ -53,7 +55,6 @@
             android:paddingRight="15dp"
             android:fontFamily="sans-serif"
             android:text="Pay: $4.50"
-            android:visibility="invisible"
             android:textStyle="bold"
             android:textColor="#ffffff"
             android:textSize="15dp" />

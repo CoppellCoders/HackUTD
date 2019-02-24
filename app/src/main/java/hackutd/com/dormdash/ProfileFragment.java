@@ -1,5 +1,6 @@
 package hackutd.com.dormdash;
 
+import android.app.job.JobInfo;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -15,6 +16,14 @@ public class ProfileFragment extends Fragment {
         // Inflate the layout for this fragment4
         View view = inflater.inflate(R.layout.activity_profile, container, false);
         Button payment = view.findViewById(R.id.payment_btn);
+        Button jobs = view.findViewById(R.id.jobsaaa);
+
+        jobs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getActivity(), DeliveryJobs.class));
+            }
+        });
 
         payment.setOnClickListener(new View.OnClickListener() {
             @Override

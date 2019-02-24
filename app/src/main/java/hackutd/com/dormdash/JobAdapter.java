@@ -10,7 +10,10 @@ import android.widget.TextView;
 
 
 import com.squareup.picasso.Picasso;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 1a1b51dbcd970205465d4a7682a582df149cb480
 
 import java.util.List;
 
@@ -30,7 +33,11 @@ public class JobAdapter extends RecyclerViewAdapter<JobItem, JobAdapter.ItemItem
 
     @Override
     public JobAdapter.ItemItemViewHolder onCreateViewHolder(@NonNull final ViewGroup parent,
+<<<<<<< HEAD
                                                             final int viewType) {
+=======
+                                                             final int viewType) {
+>>>>>>> 1a1b51dbcd970205465d4a7682a582df149cb480
         return new ItemItemViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.row_item_jobs, parent, false));
     }
 
@@ -50,6 +57,12 @@ public class JobAdapter extends RecyclerViewAdapter<JobItem, JobAdapter.ItemItem
         @NonNull
         private final TextView distanceTextView;
 
+<<<<<<< HEAD
+=======
+        @NonNull
+        private final TextView priceTextView;
+
+>>>>>>> 1a1b51dbcd970205465d4a7682a582df149cb480
 
         public ItemItemViewHolder (@NonNull final View itemView) {
             super(itemView);
@@ -58,6 +71,10 @@ public class JobAdapter extends RecyclerViewAdapter<JobItem, JobAdapter.ItemItem
             descTextView = (TextView) itemView.findViewById(R.id.item_desc);
             ratingTextView = (TextView) itemView.findViewById(R.id.item_rating);
             distanceTextView = (TextView) itemView.findViewById(R.id.item_distance);
+<<<<<<< HEAD
+=======
+            priceTextView = itemView.findViewById(R.id.item_price);
+>>>>>>> 1a1b51dbcd970205465d4a7682a582df149cb480
         }
 
         @Override
@@ -68,8 +85,18 @@ public class JobAdapter extends RecyclerViewAdapter<JobItem, JobAdapter.ItemItem
             Picasso.with(context).load(((jobItem)).getImg()).into(imgImageView);
 
             titleTextView.setText(jobItem.getTitle());
+<<<<<<< HEAD
 
             descTextView.setText(jobItem.getDesc());
+=======
+
+            descTextView.setText(jobItem.getDesc());
+
+            ratingTextView.setText(String.valueOf(jobItem.getRating())+"/5.0");
+            distanceTextView.setText(String.valueOf(jobItem.getDistance() + " miles away"));
+            priceTextView.setVisibility(View.VISIBLE);
+            priceTextView.setText("$"+String.valueOf(jobItem.getMoneys()));
+>>>>>>> 1a1b51dbcd970205465d4a7682a582df149cb480
 
             ratingTextView.setText(String.valueOf(jobItem.getRating())+"/5.0");
             distanceTextView.setText(String.valueOf(jobItem.getDistance() + " miles away"));
