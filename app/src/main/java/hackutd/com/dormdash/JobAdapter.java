@@ -9,6 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -16,11 +17,11 @@ public class JobAdapter extends RecyclerViewAdapter<JobItem, JobAdapter.ItemItem
 
 
     private Context context;
-    List<JobItem> outfit;
+    List<JobItem> jobItems;
 
     public JobAdapter(List<JobItem> outfit, Context context) {
         super(outfit);
-        this.outfit = outfit;
+        this.jobItems = outfit;
         this.context = context;
     }
 
@@ -29,7 +30,7 @@ public class JobAdapter extends RecyclerViewAdapter<JobItem, JobAdapter.ItemItem
     @Override
     public JobAdapter.ItemItemViewHolder onCreateViewHolder(@NonNull final ViewGroup parent,
                                                              final int viewType) {
-        return new ItemItemViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.row_item_cosmet, parent, false));
+        return new ItemItemViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.row_item_jobs, parent, false));
     }
 
 
@@ -39,22 +40,38 @@ public class JobAdapter extends RecyclerViewAdapter<JobItem, JobAdapter.ItemItem
         @NonNull
         private final TextView titleTextView;
 
+        @NonNull
+        private final TextView descTextView;
+
+        @NonNull
+        private final TextView ratingTextView;
+
+        @NonNull
+        private final TextView distanceTextView;
+
 
         public ItemItemViewHolder (@NonNull final View itemView) {
             super(itemView);
             imgImageView = (ImageView) itemView.findViewById(R.id.itemPic);
             titleTextView = (TextView) itemView.findViewById(R.id.itemName);
-
+            descTextView = (TextView) itemView.findViewById(R.id.item_desc);
+            ratingTextView = (TextView) itemView.findViewById(R.id.item_rating);
+            distanceTextView = (TextView) itemView.findViewById(R.id.item_distance);
         }
 
         @Override
         public void bind(int position) {
             super.bind(position);
-            final AmmoItem newsItem = get(position);
-            Picasso.with(context).load(newsItem.getImgSrc()).into(imgImageView);
+            final JobItem jobItem = get(position);
+            System.out.println("nigga" + jobItem.toString());
+            Picasso.with(context).load(((jobItem)).getImg()).into(imgImageView);
 
-            titleTextView.setText(newsItem.getTitle());
+            titleTextView.setText(jobItem.getTitle());
 
+            descTextView.setText(jobItem.getDesc());
+
+            ratingTextView.setText(String.valueOf(jobItem.getRating())+"/5.0");
+            distanceTextView.setText(String.valueOf(jobItem.getDistance() + " miles away"));
         }
 
     }

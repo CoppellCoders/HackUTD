@@ -67,4 +67,16 @@ public class JobItem implements Serializable {
     public void setDistance(double distance) {
         this.distance = distance;
     }
+
+    @Override
+    public String toString() {
+        return "JobItem{" +
+                "title='" + title + '\'' +
+                ", img=" + img +
+                ", desc='" + desc + '\'' +
+                ", rating=" + rating +
+                ", moneys=" + moneys +
+                ", distance=" + distance +
+                '}';
+    }
 }

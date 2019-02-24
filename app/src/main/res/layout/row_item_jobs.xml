@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="wrap_content"
-    tools:background="@drawable/jobs_background"
+    android:background="#FF9454"
     android:layout_height="wrap_content"
 
     android:weightSum="1">
@@ -13,6 +13,7 @@
         android:id="@+id/itemPic"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_margin="10dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_gravity="center"
@@ -112,7 +113,7 @@ android:gravity="right"
 
         android:fontFamily="sans-serif"
         android:text="5 miles away"
-
+android:layout_marginBottom="10dp"
         android:textColor="#ffffff"
         android:textSize="15dp" />
 
