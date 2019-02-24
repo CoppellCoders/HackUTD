@@ -49,6 +49,9 @@ public class JobAdapter extends RecyclerViewAdapter<JobItem, JobAdapter.ItemItem
         @NonNull
         private final TextView distanceTextView;
 
+        @NonNull
+        private final TextView priceTextView;
+
 
         public ItemItemViewHolder (@NonNull final View itemView) {
             super(itemView);
@@ -57,6 +60,7 @@ public class JobAdapter extends RecyclerViewAdapter<JobItem, JobAdapter.ItemItem
             descTextView = (TextView) itemView.findViewById(R.id.item_desc);
             ratingTextView = (TextView) itemView.findViewById(R.id.item_rating);
             distanceTextView = (TextView) itemView.findViewById(R.id.item_distance);
+            priceTextView = itemView.findViewById(R.id.item_price)
         }
 
         @Override
