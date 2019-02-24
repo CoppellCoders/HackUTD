@@ -32,33 +32,27 @@ public class MenuAdapter extends RecyclerViewAdapter<Menu, MenuAdapter.ItemItemV
     @Override
     public MenuAdapter.ItemItemViewHolder onCreateViewHolder(@NonNull final ViewGroup parent,
                                                                   final int viewType) {
-        return new ItemItemViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.row_item_jobs, parent, false));
+        return new ItemItemViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.row_item_menu, parent, false));
     }
 
 
     public class ItemItemViewHolder extends RecyclerViewAdapter.ViewHolder {
         @NonNull
-        private final ImageView imgImageView;
+        private final TextView menuName;
         @NonNull
-        private final TextView titleTextView;
+        private final TextView menuDetail;
 
         @NonNull
-        private final TextView descTextView;
+        private final TextView menuDesc;
 
-        @NonNull
-        private final TextView ratingTextView;
 
-        @NonNull
-        private final TextView distanceTextView;
 
 
         public ItemItemViewHolder (@NonNull final View itemView) {
             super(itemView);
-            imgImageView = (ImageView) itemView.findViewById(R.id.itemPic);
-            titleTextView = (TextView) itemView.findViewById(R.id.itemName);
-            descTextView = (TextView) itemView.findViewById(R.id.item_desc);
-            ratingTextView = (TextView) itemView.findViewById(R.id.item_rating);
-            distanceTextView = (TextView) itemView.findViewById(R.id.item_distance);
+            menuName = itemView.findViewById(R.id.menu_name);
+            menuDetail = itemView.findViewById(R.id.menu_detail);
+            menuDesc = itemView.findViewById(R.id.menu_desc);
         }
 
         @Override
@@ -66,12 +60,9 @@ public class MenuAdapter extends RecyclerViewAdapter<Menu, MenuAdapter.ItemItemV
             super.bind(position);
             final Menu Item = get(position);
 
-
-            titleTextView.setText(Item.getrName());
-            descTextView.setText(Item.getrType());
-
-            ratingTextView.setText(String.valueOf(Item.getRating())+"/5.0");
-            distanceTextView.setText(String.valueOf(Item.getDistance() + " miles away"));
+            menuName.setText(Item.name);
+            menuDetail.setText(Item.priceCalories);
+            menuDesc.setText(Item.description);
         }
 
     }
