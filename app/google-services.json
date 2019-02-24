@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "532041819872",
+    "firebase_url": "https://hackutd-4765d.firebaseio.com",
+    "project_id": "hackutd-4765d",
+    "storage_bucket": "hackutd-4765d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:532041819872:android:fadf90efad8bd759",
+        "android_client_info": {
+          "package_name": "hackutd.com.dormdash"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "532041819872-mi1abqd0ec3vk9jor86ueieush2mpog2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "hackutd.com.dormdash",
+            "certificate_hash": "49a26f03c7bb2ef28ecf8d3ad371eabc42713939"
+          }
+        },
+        {
+          "client_id": "532041819872-niit408l9qnd6gpbsf21aicse3g1db6p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAqRbURIZyqN8K1mW2eO27YTcBosC47U4A"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "532041819872-niit408l9qnd6gpbsf21aicse3g1db6p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

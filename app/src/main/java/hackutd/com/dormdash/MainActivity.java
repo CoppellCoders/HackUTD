@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
                     changeFragment(new RestrauntsFragment());
                     return true;
                 case R.id.navigation_orderHistory:
-
+                    changeFragment(new FreeFoodFragment());
                     return true;
             }
             return false;

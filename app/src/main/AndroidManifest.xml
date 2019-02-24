@@ -36,7 +36,8 @@
         <activity
             android:name=".DeliveryJobs"
             android:label="@string/title_activity_delivery_jobs"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
+        <activity android:name=".FreeFoodAdd"></activity>
     </application>
 
 </manifest>

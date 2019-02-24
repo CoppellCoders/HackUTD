@@ -24,6 +24,7 @@
             android:text="Darshan Bhatta"/>
 
         <TextView
+            android:id="@+id/totalMonies"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center|right"

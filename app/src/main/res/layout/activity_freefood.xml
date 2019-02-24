@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v4.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:id="@+id/refesh_free"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+        android:background="@drawable/background_gradient"
+
+        android:orientation="vertical"
+
+        android:layout_height="match_parent">
+
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="25dp"
+                android:textColor="@color/colorPrimary"
+                android:text="Free Food"
+                android:textSize="30dp"
+                />
+
+
+            <Button
+                android:id="@+id/addpostbtn"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_marginTop="25dp"
+                android:layout_gravity="right"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/plus_icon"/>
+
+        </FrameLayout>
+
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/freefood"
+            android:layout_width="match_parent"
+            android:layout_height="523dp"
+            android:layout_marginTop="8dp"
+
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp" />
+
+    </LinearLayout>
+
+</android.support.v4.widget.SwipeRefreshLayout>
+

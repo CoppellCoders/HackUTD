@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+  android:paddingBottom="20dp"
+    android:layout_width="wrap_content"
+    android:layout_margin="10dp"
+    android:background="@drawable/freefood_background"
+    android:layout_height="wrap_content"
+
+    android:weightSum="1">
+
+
+
+        <TextView
+            android:id="@+id/free_name"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity=""
+            android:layout_marginStart="13dp"
+            android:layout_toEndOf="@+id/itemPic"
+            android:fontFamily="sans-serif"
+            android:text="Free Chick Fil A Sandwich"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            android:textSize="20dp" />
+
+
+        <TextView
+            android:id="@+id/freefood_time"
+            android:gravity="left"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="13dp"
+            android:layout_toEndOf="@+id/itemPic"
+            android:layout_weight="0.18"
+            android:visibility="visible"
+            android:paddingRight="15dp"
+            android:fontFamily="sans-serif"
+            android:text="Posted 3 hours ago"
+
+            android:textColor="#ffffff"
+            android:textSize="15dp" />
+
+
+
+
+    <TextView
+        android:id="@+id/freefood_desc"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_gravity=""
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+
+        android:layout_toEndOf="@+id/itemPic"
+        android:fontFamily="sans-serif"
+        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin imperdiet pharetra nisi. Proin fringilla tempor libero, at elementum nunc eleifend non. Mauris gravida ex felis, eu efficitur magna ullamcorper ultricies. Praesent mollis accumsan urna, non feugiat nisl scelerisque vitae. Sed quis mollis turpis"
+        android:textColor="#ffffff"
+        android:layout_marginBottom="10dp"
+        android:textSize="12dp"
+        android:visibility="visible" />
+
+
+    <TextView
+        android:layout_marginTop="-5dp"
+        android:gravity="left"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+
+        android:layout_marginStart="13dp"
+        android:layout_toEndOf="@+id/itemPic"
+        android:layout_weight="0.18"
+        android:visibility="visible"
+        android:paddingRight="15dp"
+
+        android:fontFamily="sans-serif"
+        android:text="Location"
+
+        android:textColor="#ffffff"
+        android:textSize="15dp" />
+    <TextView
+        android:id="@+id/freefood_location"
+        android:gravity="center"
+        android:layout_marginBottom="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_gravity=""
+        android:layout_marginStart="13dp"
+        android:layout_toEndOf="@+id/itemPic"
+        android:layout_weight="0.18"
+        android:visibility="visible"
+        android:paddingRight="15dp"
+
+        android:fontFamily="sans-serif"
+        android:text="Chick Fil A at UTD"
+
+        android:textColor="#ffffff"
+        android:textSize="15dp" />
+
+</LinearLayout>
