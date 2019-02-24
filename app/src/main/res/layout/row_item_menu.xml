@@ -39,6 +39,7 @@
             android:layout_gravity="center"
             android:gravity="center"
             android:text="0"
+            android:layout_marginRight="10dp"
             android:id="@+id/num_items"
             android:textColor="#ffffff"
             android:background="@drawable/number_items"

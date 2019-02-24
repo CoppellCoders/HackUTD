@@ -114,10 +114,15 @@
     android:layout_marginEnd="8dp" />
 
     <Button
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/edittext_bg"
         android:layout_gravity="center"
+        android:visibility="gone"
+        android:textColor="@color/colorPrimary"
+        android:backgroundTint="#77B210"
+        android:textAllCaps="false"
         android:text="Checkout"
         android:id="@+id/checkout"
         />

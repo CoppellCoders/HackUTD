@@ -47,7 +47,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:paddingLeft="10dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         />
     <Button
         android:layout_width="wrap_content"
@@ -60,9 +60,10 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:paddingLeft="10dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:drawablePadding="5dp"
         />
+
     <Button
         android:layout_width="wrap_content"
         android:id="@+id/jobsaaa"
@@ -75,7 +76,21 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:paddingLeft="10dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
+        android:drawablePadding="5dp"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:text="Order History"
+        android:background="@drawable/profile_edittext_bg"
+        android:drawableLeft="@drawable/history"
+        android:gravity="left|center"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:paddingLeft="10dp"
+        android:layout_marginTop="10dp"
         android:drawablePadding="5dp"
         />
     <Button
@@ -89,7 +104,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:paddingLeft="10dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:drawablePadding="5dp"
         />
     <Button
@@ -103,7 +118,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:paddingLeft="10dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:drawablePadding="5dp"
         />
     <Button
@@ -117,7 +132,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:paddingLeft="10dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:drawablePadding="5dp"
         />
 
