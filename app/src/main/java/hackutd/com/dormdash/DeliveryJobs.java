@@ -42,6 +42,7 @@ public class DeliveryJobs extends AppCompatActivity {
     public RecyclerView recyclerView;
     private JobAdapter adapter;
     LinearLayout x;
+    TextView money;
     Dialog myDia;
     ImageButton imagebutton, imagebuttonn;
     private ArrayList<JobItem> jobItems;
@@ -52,7 +53,7 @@ public class DeliveryJobs extends AppCompatActivity {
         recyclerView = findViewById(R.id.jobs);
         jobItems = new ArrayList<>();
         x = findViewById(R.id.deliveyjob);
-
+        money = findViewById(R.id.moniesss);
         final SwipeRefreshLayout swipeRefreshLayout = findViewById(R.id.refesh_delivery);
         swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
@@ -73,6 +74,7 @@ public class DeliveryJobs extends AppCompatActivity {
                                 myDia.setContentView(R.layout.jobitempopup);
                                 imagebutton = (ImageButton) myDia.findViewById(R.id.map_aaaaa);
                                 imagebuttonn = (ImageButton) myDia.findViewById(R.id.map_aaaa);
+
                            imagebutton.setOnClickListener(new View.OnClickListener() {
                                @Override
                                public void onClick(View view) {
@@ -98,6 +100,10 @@ public class DeliveryJobs extends AppCompatActivity {
                                         myDia.dismiss();
                                         jobItems.remove(itemItem);
                                         adapter =  new JobAdapter(jobItems,getApplication());
+                                        double current = Double.parseDouble((money.getText().toString().replace("$","")));
+                                        double newBal = current+itemItem.getMoneys();
+
+                                        money.setText("$"+String.format("%.2f", newBal));
                                         recyclerView.setAdapter(adapter);
                                         adapter.notifyDataSetChanged();
 
@@ -147,6 +153,9 @@ public class DeliveryJobs extends AppCompatActivity {
                     public void onClick(View view) {
                         int random = (int )(Math.random() * 999999 + 000000);
                         myDia.dismiss();
+                        double current = Double.parseDouble((money.getText().toString().replace("$","")));
+                        double newBal = current+itemItem.getMoneys();
+                        money.setText("$"+String.format("%.2f", newBal));
                         jobItems.remove(itemItem);
                         adapter =  new JobAdapter(jobItems,getApplication());
                         recyclerView.setAdapter(adapter);
